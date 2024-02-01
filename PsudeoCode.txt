@@ -1,0 +1,33 @@
+
+
+public string characterName;
+public int level;
+public int CONScore;
+public bool isHillDwarf;
+public bool hasToughFeat;
+public bool averageCalc;
+
+public enum ClassType {};
+public ClassType class;
+Dictionary<ClassType, int> HPDie;
+
+
+
+Main{
+
+int CONModifier = Floor((CONScore - 10) / 2);
+
+int modifiers = (convert.toInt(hasToughFeat)*2)+CONmodifier+convert.toInt(isHillDwarf);
+
+int finalHP=HPdie+;
+if(avergaeCalc){
+	finalHP+=(level-1)*(((HPdie[class]+1)/2).roundup)+modifiers;
+}else{
+	for(int i=0;i<level-1;i++){
+		finalHP +=mathf.clamp(random.range(1,HPdie[class])+modifiers,0,int.max);
+	}
+}
+
+Print(Data);
+
+}
